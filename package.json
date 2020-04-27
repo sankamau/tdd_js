@@ -1,0 +1,24 @@
+{
+  "name": "tdd_pratica",
+  "version": "1.0.0",
+  "description": "\u001b[A\u001b[A\u001b[B\u001b[B\"\"\u001b[D curso de tdd na pratica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sankamau/tdd_js.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Mauricio Furlan <mauricio.furlan@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sankamau/tdd_js/issues"
+  },
+  "homepage": "https://github.com/sankamau/tdd_js#readme"
+}
