@@ -1,7 +1,7 @@
 const amor = 'aew';
 
 function log1() {
-  return amor
+  return amor;
 }
 
 log1();
