@@ -4,9 +4,23 @@
   "description": "\u001b[A\u001b[A\u001b[B\u001b[B\"\"\u001b[D curso de tdd na pratica",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src/main.js",
-    "prepush": "npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint src/spotfy.js",
+    "prepush": "npm run lint && npm run test:coverage",
+    "test": "./node_modules/.bin/mocha testes/**/spotfy.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha testes/**/sporfy.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "testes/**"
+    ]
   },
   "repository": {
     "type": "git",
@@ -24,8 +38,14 @@
   },
   "homepage": "https://github.com/sankamau/tdd_js#readme",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-airbnb-base": "^14.1.0",
@@ -33,9 +53,16 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
-    "husky": "^4.2.5"
+    "husky": "^4.2.5",
+    "mocha": "^7.1.2",
+    "node-fetch": "^2.6.0",
+    "nyc": "^15.0.1",
+    "sinon": "^9.0.2",
+    "sinon-chai": "^3.5.0"
   },
   "dependencies": {
+    "package.json": "^2.0.1",
+    "sinon-stub-promise": "^4.0.0",
     "tsutils": "^3.17.1"
   }
 }
