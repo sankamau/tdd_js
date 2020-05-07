@@ -36,8 +36,8 @@ describe('Spotfy', () => {
     it('should exist the searchArtists method', () => {
       expect(searchArtists).to.exist;
     });
-    it('should exist the searchTracks method', () => {
-      expect(searchTracks).to.exist;
+    it('should exist the searchTrack method', () => {
+      expect(searchTrack).to.exist;
     });
     it('should exist the searchPlaylist method', () => {
       expect(searchPlaylist).to.exist;
@@ -82,11 +82,11 @@ describe('Spotfy', () => {
   });
   describe('searchTrack', () => {
     it('should call fetch function', () => {
-     const tracks = searchTrack('Incubus');
+     const track = searchTrack('Incubus');
      expect(fetchedStub).to.have.calledOnce;
     });
     it('should call fetch with the correct URL', () => {
-      const tracks2 = searchTrack('Incubos');
+      const track2 = searchTrack('Incubos');
       expect(fetchedStub).to.have.been.calledWith('https://api.spotify.com/v1/search?q=Incubos&type=track');
     });
   });

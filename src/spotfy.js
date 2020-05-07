@@ -9,7 +9,7 @@ const searchArtists = (query) => {
   search(query, 'artist');
 };
 const searchTrack = (query) => {
-  search(query, 'tracks');
+  search(query, 'track');
 };
 const searchPlaylist = (query) => {
   search(query, 'playlist');
